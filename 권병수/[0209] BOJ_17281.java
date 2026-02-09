@@ -93,19 +93,4 @@ public class G4_17281_baseball {
 		return s;
 	}
 	
-	
-	// 한번 옮길때마다 1을 추가해줘서 오류 
-//	public static int hit(int n, int[] player) {
-//		int s = 0;
-//		for (int i = 0; i < n; i++) { // n번 반복 
-//			for (int j = 2; j > 0; j--) { // 110 --> 111
-//				if(j==2 && player[j] == 1) s++;
-//				player[j] = player[j-1];
-//			}
-//			player[0] = 1; // 공을 친 선수가 1루로
-//		}
-//		return s;
-//	}
-	
-	
 }
