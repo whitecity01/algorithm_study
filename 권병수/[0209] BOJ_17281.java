@@ -12,7 +12,7 @@ public class G4_17281_baseball {
 		N = Integer.parseInt(br.readLine()); // 이닝 수 // 9명의 선수
 		// 0번 선수를 3번 타자로 // 타순은 이닝이 변경되어도 유지
 		// 1~8번수 -> 순서저장
-		data = new int[N][9];  
+		data = new int[N][9];
 		for (int i = 0; i < N; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < 9; j++) 
@@ -27,8 +27,7 @@ public class G4_17281_baseball {
 		System.out.println(result);
 	}
 	
-	// 0번 선수를 3번 타자로 copy해서 중간에 끼워 넣을까? list <-> 전환 귀찮
-	// 3이면 넘어가는걸로
+	// 선수 순서 지정
 	public static void order(int cnt) {
 		if(cnt == 9) {
 			result = Math.max(result, cal());
@@ -45,7 +44,7 @@ public class G4_17281_baseball {
 		}
 	}
 	
-	// player의 정보를 뭐로 저장하지, 배열?list? 루의 수가 항상 3개로 고정이므로 배열 선택
+	// 점수계산
 	public static int cal() {
 		int p = 0;
 		int[] player = new int[3];
@@ -62,7 +61,7 @@ public class G4_17281_baseball {
 				
 				idx = (idx + 1)%9;
 				if(out == 3) {
-					player = new int[3]; // out일때 루가 초기화되는걸 깜빡, 문제를 잘읽자
+					player = new int[3]; // out일때 루가 초기화
 					break;
 				}
 			}
@@ -80,7 +79,7 @@ public class G4_17281_baseball {
 			}
 			player[0] = 0;
 		}
-		player[n-1] = 1; // 타자의 위치ㅠ
+		player[n-1] = 1; // 타자의 위치
 		return s;
 	}
 	
